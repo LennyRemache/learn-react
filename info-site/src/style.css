@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(29, 29, 54);
+  font-family: "Inter";
+  padding: 25px;
+}
+
+.main-logo {
+  display: flex;
+  align-items: center;
+  color: rgb(109, 212, 250);
+}
+
+.main-logo > h2 {
+  margin: 5px;
+}
+
+.course-name {
+  color: whitesmoke;
+  font-weight: 600;
+  margin-top: auto;
+  margin-bottom: auto;
+}
