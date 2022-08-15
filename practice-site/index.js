@@ -1,5 +1,7 @@
+// custom Page component
 function Page() {
   return (
+    // jsx code
     <div>
       <img src="./react-logo.png" width="100px" />
       <h1>Fun facts about React</h1>
