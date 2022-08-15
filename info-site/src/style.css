@@ -1,32 +1,60 @@
 * {
   box-sizing: border-box;
+  margin: 0;
 }
 
 body {
   margin: 0;
+  font-family: Inter, sans-serif;
 }
 
 .nav-bar {
   display: flex;
-  justify-content: space-between;
-  background-color: rgb(29, 29, 54);
-  font-family: "Inter";
-  padding: 25px;
-}
-
-.main-logo {
-  display: flex;
   align-items: center;
-  color: rgb(109, 212, 250);
+  background-color: #21222a;
+  padding: 30px 25px;
+  height: 90px;
 }
 
-.main-logo > h2 {
-  margin: 5px;
+.page-name {
+  color: #61dafb;
+  margin-left: 5px;
+  margin-right: auto;
+  font-weight: 600;
+  font-size: 22px;
 }
 
 .course-name {
-  color: whitesmoke;
+  color: #deebf8;
   font-weight: 600;
-  margin-top: auto;
-  margin-bottom: auto;
+}
+
+.main-content {
+  background-color: #282d35;
+  padding: 57px 27px;
+  color: white;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-title {
+  font-size: 39.06px;
+  letter-spacing: -0.05em;
+}
+
+.react-facts {
+  margin-top: 40px;
+  max-width: 400px;
+}
+
+.react-facts > li {
+  line-height: 19px;
+  padding-block: 10px;
+}
+
+.react-facts > li::marker {
+  color: #61dafb;
+  font-size: 1.5rem;
 }
