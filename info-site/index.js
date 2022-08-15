@@ -1,29 +1,15 @@
-function NavBar() {
-  return (
-    // this is JSX code
-    <nav>
-      <h1>Lenny's Restaurant</h1>
-      <ul>
-        <li>Pricing</li>
-        <li>About</li>
-        <li>Contact</li>
-      </ul>
-    </nav>
-  );
-}
-
-ReactDOM.render(
+const page = (
   <div>
-    <NavBar />
-  </div>,
-  document.getElementById("root")
+    <img src="./react-logo.png" width="100px" />
+    <h1>Fun facts about React</h1>
+    <ul>
+      <li>Was first released in 2013</li>
+      <li>Was originally created by Jordan Walke</li>
+      <li>Has well over 100k stars on Github</li>
+      <li>Is maintained by Facebook</li>
+      <li>Power thousands of enterprise apps, including mobile apps</li>
+    </ul>
+  </div>
 );
 
-const list = (
-  <ul>
-    <li>test1</li>
-    <li>test2</li>
-  </ul>
-);
-
-console.log(list);
+ReactDOM.render(page, document.getElementById("root"));
