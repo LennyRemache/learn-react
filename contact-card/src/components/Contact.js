@@ -5,6 +5,10 @@ import "./Contact.css";
 
 // destructuring props object by using the object key names
 export default function Contact({ img, name, phone, email, rank }) {
+  function handleClick() {
+    console.log("I was clicked!");
+  }
+
   return (
     <div className="contact-card">
       <img src={img} />
@@ -20,6 +24,7 @@ export default function Contact({ img, name, phone, email, rank }) {
         <img src="./images/mail-icon.png" />
         <p>{email}</p>
       </div>
+      <button onClick={handleClick}>Click Me</button>
     </div>
   );
 }
