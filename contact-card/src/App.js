@@ -3,10 +3,9 @@ import "./App.css";
 import catData from "./catData.js";
 
 function App() {
-  const contacts = catData.map(({ img, name, phone, email, rank }) => {
-    return (
-      <Contact img={img} name={name} phone={phone} email={email} rank={rank} />
-    );
+  // reduce prop clutter by passing in the whole data object as one prop
+  const contacts = catData.map((cat) => {
+    return <Contact info={cat} />;
   });
 
   // custom components can have props/attribute of any name
