@@ -4,21 +4,21 @@ import "./Contact.css";
 // from each instance of the Contact Component
 
 // destructuring props object by using the object key names
-export default function Contact({ info }) {
+export default function Contact({ img, name, phone, email, rank }) {
   return (
     <div className="contact-card">
-      <img src={info.img} />
+      <img src={img} />
       <h3>
-        {info.name}
-        {info.rank === 2 && <p>BEST!!</p>}
+        {name}
+        {rank === 2 && <p>BEST!!</p>}
       </h3>
       <div className="info-group">
         <img src="./images/phone-icon.png" />
-        <p>{info.phone}</p>
+        <p>{phone}</p>
       </div>
       <div className="info-group">
         <img src="./images/mail-icon.png" />
-        <p>{info.email}</p>
+        <p>{email}</p>
       </div>
     </div>
   );
