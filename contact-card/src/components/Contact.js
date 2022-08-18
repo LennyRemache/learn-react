@@ -9,6 +9,9 @@ export default function Contact({ img, name, phone, email, rank }) {
   const [count, setCount] = useState(0);
 
   function add() {
+    // count++ modifies state directly so use count + 1 instead
+    // also pass a call back function instead, for good practices
+    // setter function takes in new value of state setCount(count + 1) or callback function that returns what the new value state is
     setCount((prevCount) => prevCount + 1);
   }
 
