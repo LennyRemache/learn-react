@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import "./Contact.css";
 
 // pass in props by making props a parameter which is a Object of the props passed in
@@ -5,8 +6,14 @@ import "./Contact.css";
 
 // destructuring props object by using the object key names
 export default function Contact({ img, name, phone, email, rank }) {
-  function handleClick() {
-    console.log("I was clicked!");
+  const [count, setCount] = useState(0);
+
+  function add() {
+    setCount((prevCount) => prevCount + 1);
+  }
+
+  function subtract() {
+    setCount((prevCount) => prevCount - 1);
   }
 
   return (
@@ -24,7 +31,9 @@ export default function Contact({ img, name, phone, email, rank }) {
         <img src="./images/mail-icon.png" />
         <p>{email}</p>
       </div>
-      <button onClick={handleClick}>Click Me</button>
+      <p>{count}</p>
+      <button onClick={add}>Add</button>
+      <button onClick={subtract}>Subtract</button>
     </div>
   );
 }
