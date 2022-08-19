@@ -44,13 +44,6 @@ function App() {
 
   function toggle(id) {
     setSquares((prevSquares) => {
-      // let newSquares = [...prevSquares];
-      // let currSquare = newSquares[id - 1];
-      // newSquares[id - 1] = {
-      //   ...currSquare,
-      //   on: !currSquare.on,
-      // };
-      // return newSquares;
       return prevSquares.map((square) => {
         return square.id === id ? { ...square, on: !square.on } : square;
       });
@@ -59,7 +52,12 @@ function App() {
 
   const squareElements = squares.map((square) => {
     return (
-      <Box key={square.id} id={square.id} on={square.on} handleClick={toggle} />
+      <Box
+        key={square.id}
+        id={square.id}
+        on={square.on}
+        handleClick={() => toggle(square.id)}
+      />
     );
   });
 

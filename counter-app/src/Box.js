@@ -10,7 +10,7 @@ export default function Box(props) {
     <div
       className="box"
       style={styles}
-      onClick={() => props.handleClick(props.id)}
+      onClick={() => props.handleClick()}
     ></div>
   );
 }
