@@ -60,7 +60,7 @@ function App() {
     );
   });
 
-  const [messages, setMessages] = React.useState(["a"]);
+  const [messages, setMessages] = React.useState(["a", "b"]);
 
   return (
     <div className="App">
@@ -77,8 +77,8 @@ function App() {
           <h1>"You're all caught up!"</h1>
         ) : (
           <h1>
-            You have {messages.length} unread message
-            {messages.length > 1 && "s"}
+            You have {messages.length} unread
+            {messages.length === 1 ? "message" : "messages"}
           </h1>
         )}
       </div>
