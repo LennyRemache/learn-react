@@ -54,7 +54,6 @@ function App() {
     return (
       <Box
         key={square.id}
-        id={square.id}
         on={square.on}
         handleClick={() => toggle(square.id)}
       />
