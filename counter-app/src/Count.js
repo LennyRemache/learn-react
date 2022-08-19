@@ -1,3 +1,7 @@
 export default function Count(props) {
-  return <p>{props.number}</p>;
+  const styles = {
+    color: "red",
+  };
+
+  return <p style={styles}>{props.number}</p>;
 }
