@@ -60,6 +60,8 @@ function App() {
     );
   });
 
+  const [messages, setMessages] = React.useState(["a"]);
+
   return (
     <div className="App">
       <button onClick={add}>Add</button>
@@ -70,6 +72,16 @@ function App() {
       {renderThingsArr}
 
       {squareElements}
+      <div>
+        {messages.length === 0 ? (
+          <h1>"You're all caught up!"</h1>
+        ) : (
+          <h1>
+            You have {messages.length} unread message
+            {messages.length > 1 && "s"}
+          </h1>
+        )}
+      </div>
     </div>
   );
 }
