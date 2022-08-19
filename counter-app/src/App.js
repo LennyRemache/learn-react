@@ -2,6 +2,8 @@ import logo from "./logo.svg";
 import "./App.css";
 import React from "react";
 
+import Count from "./Count";
+
 function App() {
   const [thingsArr, setThingsArr] = React.useState(["Thing 1"]);
 
@@ -28,8 +30,16 @@ function App() {
     }));
   }
 
+  const [count, setCount] = React.useState(0);
+
+  function add() {
+    setCount((prevCount) => prevCount + 1);
+  }
+
   return (
     <div className="App">
+      <button onClick={add}>Add</button>
+      <Count number={count} />
       <button onClick={isHere}>Is here?</button>
       <p>{personObj.isHere ? "Yes" : "No"}</p>
       <button onClick={addThing}>Add Thing</button>
