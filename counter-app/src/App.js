@@ -3,6 +3,8 @@ import "./App.css";
 import React from "react";
 
 import Count from "./Count";
+import boxes from "./boxes";
+import Box from "./Box";
 
 function App() {
   // whenever state changes React will rerender the component where the state exists and
@@ -38,6 +40,12 @@ function App() {
     setCount((prevCount) => prevCount + 1);
   }
 
+  const [squares, setSquares] = React.useState(boxes);
+
+  const squareElements = squares.map((square) => {
+    return <Box key={square.id} on={square.on} />;
+  });
+
   return (
     <div className="App">
       <button onClick={add}>Add</button>
@@ -46,6 +54,8 @@ function App() {
       <p>{personObj.isHere ? "Yes" : "No"}</p>
       <button onClick={addThing}>Add Thing</button>
       {renderThingsArr}
+
+      {squareElements}
     </div>
   );
 }
