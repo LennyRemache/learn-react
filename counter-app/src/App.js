@@ -5,6 +5,8 @@ import React from "react";
 import Count from "./Count";
 
 function App() {
+  // whenever state changes React will rerender the component where the state exists and
+  // any child components that recieve the state as props and rely on it to work correctly
   const [thingsArr, setThingsArr] = React.useState(["Thing 1"]);
 
   function addThing() {
