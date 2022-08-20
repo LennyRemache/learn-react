@@ -7,6 +7,7 @@ import boxes from "./boxes";
 import Box from "./Box";
 import Form from "./Form";
 import Calls from "./Calls";
+import Window from "./Window";
 
 function App() {
   // whenever state changes React will rerender the component where the state exists and
@@ -64,6 +65,12 @@ function App() {
 
   const [messages, setMessages] = React.useState(["a", "b"]);
 
+  const [show, setShow] = React.useState(true);
+
+  function changeShow() {
+    setShow((prevShow) => !prevShow);
+  }
+
   return (
     <div className="App">
       <button onClick={add}>Add</button>
@@ -87,6 +94,9 @@ function App() {
       <Form />
       <br />
       <Calls />
+      <br />
+      <button onClick={changeShow}>Show Window Width</button>
+      {show && <Window />}
     </div>
   );
 }
