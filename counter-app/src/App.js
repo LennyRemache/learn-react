@@ -5,6 +5,7 @@ import React from "react";
 import Count from "./Count";
 import boxes from "./boxes";
 import Box from "./Box";
+import Form from "./Form";
 
 function App() {
   // whenever state changes React will rerender the component where the state exists and
@@ -77,11 +78,12 @@ function App() {
           <h1>"You're all caught up!"</h1>
         ) : (
           <h1>
-            You have {messages.length} unread
+            You have {messages.length} unread{" "}
             {messages.length === 1 ? "message" : "messages"}
           </h1>
         )}
       </div>
+      <Form />
     </div>
   );
 }
