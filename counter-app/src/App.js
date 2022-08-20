@@ -6,6 +6,7 @@ import Count from "./Count";
 import boxes from "./boxes";
 import Box from "./Box";
 import Form from "./Form";
+import Calls from "./Calls";
 
 function App() {
   // whenever state changes React will rerender the component where the state exists and
@@ -84,6 +85,8 @@ function App() {
         )}
       </div>
       <Form />
+      <br />
+      <Calls />
     </div>
   );
 }
