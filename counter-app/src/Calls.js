@@ -7,9 +7,12 @@ export default function Calls() {
   // effect hook runs after every render
 
   React.useEffect(() => {
-    fetch(`https://swapi.dev/api/people/${count}`)
-      .then((res) => res.json())
-      .then((data) => setStarWarsData(data));
+    async function getPeople() {
+      const res = await fetch(`https://swapi.dev/api/people/${count}`);
+      const data = await res.json();
+      setStarWarsData(data);
+    }
+    getPeople();
   }, [count]);
   // dependencies array contains values that if they change, will cause the effect hook's callback function to run
 
